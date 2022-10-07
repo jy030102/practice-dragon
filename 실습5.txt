@@ -1,0 +1,147 @@
+#include <stdio.h>
+int main()
+{
+	int sum=0,i=0;
+
+	while (i <= 100) {
+		i++;
+		if (i % 3 == 0) {
+			sum = sum + i;
+
+		}
+	}
+	printf("1부터 100 사이의 모든 3의 배수의 합은 %d입니다.", sum);
+	return 0;
+}
+
+
+
+#include <stdio.h>
+int main()
+{
+	int x, y;
+
+	for (y = 1; y <= 7; y++)
+	{
+		for (x = 7; x > y; x--)
+			printf(" ");
+		
+		for (x = 0; x < y; x++)
+			printf("*");
+		printf("\n");
+	}		
+	return 0;
+}
+
+
+
+#include <stdio.h>
+int main()
+{
+	int num;
+	
+	printf("정수를 입력하시오: ");
+	scanf("%d", &num);
+	int x, y;
+
+	for (y = 1; y <= num; y++)
+	{
+		for (x = 1; x <= y; x++)
+			printf("%d",x);
+		printf("\n");
+	}
+	return 0;
+}
+
+
+
+#include <stdio.h>
+int main()
+{
+	char i;
+	int a, b, sum=0;
+	
+	
+	do {
+	printf("**********************\n");
+	printf("A--Add\n");
+	printf("S--Subtract\n");
+	printf("M--Multiply\n");
+	printf("D--Divide\n");
+	printf("Q--Quit\n");
+	printf("**********************\n");
+
+	printf("연산을 선택하시오: ");
+	scanf("%c", &i);
+	printf("두수를 공백으로 분리하여 입력하시오: ");
+	scanf("%d %d", &a, &b);
+
+
+ 
+		if (i == 'A') {
+			sum = a + b;
+			printf("결과는 %d", sum);
+		}
+		else if (i == 'S') {
+			sum = a - b;
+			printf("결과는 %d", sum);
+		}
+		else if (i == 'M') {
+			sum = a * b;
+			printf("결과는 %d", sum);
+		}
+		else if (i == 'D') {
+			sum = a / b;
+			printf("결과는 %d", sum);
+		}
+	} while (i == 'Q');
+	
+
+
+
+	return 0;
+}
+
+
+
+#include <stdio.h>
+int main()
+{
+	
+	double a;
+	double sum = 1;
+	int b=0;
+	
+	
+	printf("실수의 값을 입력하시오: ");
+	scanf("%lf", &a);
+	printf("거듭제곱횟수를 입력하시오: ");
+	scanf("%d", &b);
+	for (int i = 0; i < b; i++) {
+		sum = sum * a;
+	}
+	printf("결과값은 %lf", sum);
+
+
+
+	return 0;
+}
+
+
+
+#include <stdio.h>
+int main()
+{
+	int x,digit;
+	
+	printf("정수를 입력하시오: ");
+	scanf("%d", & x);
+
+	do {
+		digit = x % 10;
+		x = x / 10;
+		printf("%d", digit);
+	} while (x != 0);
+	return 0;
+}
+이거 개신기함 아직도 원리를 모르겠음;;;;
